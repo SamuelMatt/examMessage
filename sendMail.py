@@ -4,10 +4,10 @@
 from email.mime.text import MIMEText
 import smtplib
 
-fromAddrList = ['ms_achencer@189.cn', 'ms_achencer@wo.cn']
-fromPasswd = 'mojiezuo_1991'
-toAddr = ['mas_chencer@qq.com']
-ccAddr = ['ms_achencer@qq.com', '164555837@qq.com']
+fromAddrList = []
+fromPasswd = '0'
+toAddr = []
+ccAddr = []
 
 
 def getFromServer(addr):
@@ -36,7 +36,7 @@ def send(fromAddr, message):
 
 
 def sendMail(Dict):
-    while  fromAddrList:
+    while fromAddrList:
         fromAddr = fromAddrList.pop(0)
         try:
             edit(fromAddr, Dict)
